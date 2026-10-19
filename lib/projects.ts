@@ -11,9 +11,11 @@ export type Project = {
   theme: string;
   links: { label: string; url: string }[];
 };
+
 const github = "https://github.com/mahadihasandev/";
 const play = (id: string) =>
   "https://play.google.com/store/apps/details?id=" + id;
+
 export const projects: Project[] = [
   {
     title: "HRM + ERP",
@@ -102,20 +104,30 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "CloudSpace",
+    title: "BD Jobs Live",
+    image: "/assets/jobs-0.webp",
+    gallery: [
+      "/assets/jobs-0.webp",
+      "/assets/jobs-1.webp",
+      "/assets/jobs-2.webp",
+    ],
+    highlights: [
+      "Job-seeker mobile employment platform",
+      "Resume submission and alert notifications",
+      "Published on Google Play · Smart Software Ltd",
+    ],
     category: "Mobile apps",
-    type: "PERSONAL MOBILE PROJECT",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
     description:
-      "A React Native storage manager with storage insights, usage cards, and a clean mobile interface.",
-    tags: ["React Native", "Expo", "TypeScript"],
-    image: "/assets/react-native-cloudspace.png",
+      "Contributed to recruitment applications at Smart Software Ltd, including the job-seeker and employer experiences.",
+    tags: ["React Native", "Recruitment", "Professional work"],
     theme: "blue",
     links: [
-      { label: "Source code", url: github + "expo-clude-strage" },
       {
-        label: "View APK",
-        url: "https://drive.google.com/file/d/1uodngEDF1Gn7Vul1rmRUoOSV4-paJ139/view",
+        label: "Job-seeker app",
+        url: play("com.smartsoftware.bdjobslive"),
       },
+      { label: "Employer app", url: play("employer.bdjobslive.com") },
     ],
   },
   {
@@ -136,26 +148,21 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "BD Jobs Live",
-    image: "/assets/jobs-0.webp",
-    gallery: [
-      "/assets/jobs-0.webp",
-      "/assets/jobs-1.webp",
-      "/assets/jobs-2.webp",
-    ],
+    title: "BPC — field inspections",
     category: "Mobile apps",
     type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
     description:
-      "Contributed to recruitment applications at Smart Software Ltd, including the job-seeker and employer experiences.",
-    tags: ["React Native", "Recruitment", "Professional work"],
-    theme: "blue",
-    links: [
-      {
-        label: "Job-seeker app",
-        url: play("com.smartsoftware.bdjobslive"),
-      },
-      { label: "Employer app", url: play("employer.bdjobslive.com") },
+      "A mobile workspace for filling-station inspections, surveys, compliance assessments, and reporting for authorized BPC personnel.",
+    tags: ["React Native", "Android", "Professional work"],
+    theme: "purple",
+    image: "/assets/bpc-0.webp",
+    gallery: ["/assets/bpc-0.webp", "/assets/bpc-1.webp", "/assets/bpc-2.webp"],
+    highlights: [
+      "Digital inspections and photo evidence",
+      "Compliance scoring and PDF reports",
+      "Bengali and English support",
     ],
+    links: [{ label: "Google Play", url: play("com.bpcapp") }],
   },
   {
     title: "Multi-vendor commerce",
@@ -172,6 +179,87 @@ export const projects: Project[] = [
         url: "https://next-frontend-express-project-saii.vercel.app/",
       },
       { label: "Source code", url: github + "next-frontend-express-project" },
+    ],
+  },
+  {
+    title: "BDJobs Live Employer",
+    category: "Mobile apps",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
+    description:
+      "The employer side of BDJobs Live: a dedicated recruitment application developed as part of the Smart Software team.",
+    tags: ["React Native", "Android", "Professional work"],
+    theme: "blue",
+    image: "/assets/employer-0.webp",
+    gallery: [
+      "/assets/employer-0.webp",
+      "/assets/employer-1.webp",
+      "/assets/employer-2.webp",
+    ],
+    highlights: [
+      "Employer-focused recruitment experience",
+      "Companion to the BD Jobs Live job-seeker app",
+      "React Native · company team contribution",
+    ],
+    links: [{ label: "Google Play", url: play("employer.bdjobslive.com") }],
+  },
+  {
+    title: "Smart Hotel",
+    category: "Mobile apps",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
+    description:
+      "A mobile ERP application bringing hotel, restaurant, and hospitality operations into a connected business workspace.",
+    tags: ["React Native", "Android", "Professional work"],
+    theme: "peach",
+    image: "/assets/hotel-0.webp",
+    gallery: [
+      "/assets/hotel-0.webp",
+      "/assets/hotel-1.webp",
+      "/assets/hotel-2.webp",
+    ],
+    highlights: [
+      "Hotel ERP and business management",
+      "Mobile access to hospitality operations",
+      "React Native · company team contribution",
+    ],
+    links: [{ label: "Google Play", url: play("com.smartsoftware.hotel") }],
+  },
+  {
+    title: "Weather Update",
+    category: "Mobile apps",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
+    description:
+      "A weather application from Smart Software Ltd, included among my company mobile development and interface contributions.",
+    tags: ["React Native", "Android", "Professional work"],
+    theme: "green",
+    image: "/assets/weather-0.webp",
+    gallery: [
+      "/assets/weather-0.webp",
+      "/assets/weather-1.webp",
+      "/assets/weather-2.webp",
+    ],
+    highlights: [
+      "Weather information on mobile",
+      "Published on Google Play",
+      "React Native · company team contribution",
+    ],
+    links: [{ label: "Google Play", url: play("com.smartsoftware.weather") }],
+  },
+  // Bottom projects as requested: CloudSpace, FireChat, Smart Banking, Commerce dashboard, Sanity content studio
+  {
+    title: "CloudSpace",
+    category: "Mobile apps",
+    type: "PERSONAL MOBILE PROJECT",
+    description:
+      "A React Native storage manager with storage insights, usage cards, and a clean mobile interface.",
+    tags: ["React Native", "Expo", "TypeScript"],
+    image: "/assets/react-native-cloudspace.png",
+    theme: "blue",
+    links: [
+      { label: "Source code", url: github + "expo-clude-strage" },
+      {
+        label: "View APK",
+        url: "https://drive.google.com/file/d/1uodngEDF1Gn7Vul1rmRUoOSV4-paJ139/view",
+      },
     ],
   },
   {
@@ -240,71 +328,3 @@ export const projects: Project[] = [
     ],
   },
 ];
-const mobileApps = [
-  {
-    title: "BPC — field inspections",
-    id: "com.bpcapp",
-    asset: "bpc",
-    theme: "purple",
-    description:
-      "A mobile workspace for filling-station inspections, surveys, compliance assessments, and reporting for authorized BPC personnel.",
-    highlights: [
-      "Digital inspections and photo evidence",
-      "Compliance scoring and PDF reports",
-      "Bengali and English support",
-    ],
-  },
-  {
-    title: "BDJobs Live Employer",
-    id: "employer.bdjobslive.com",
-    asset: "employer",
-    theme: "blue",
-    description:
-      "The employer side of BDJobs Live: a dedicated recruitment application developed as part of the Smart Software team.",
-    highlights: [
-      "Employer-focused recruitment experience",
-      "Companion to the BD Jobs Live job-seeker app",
-      "React Native · company team contribution",
-    ],
-  },
-  {
-    title: "Smart Hotel",
-    id: "com.smartsoftware.hotel",
-    asset: "hotel",
-    theme: "peach",
-    description:
-      "A mobile ERP application bringing hotel, restaurant, and hospitality operations into a connected business workspace.",
-    highlights: [
-      "Hotel ERP and business management",
-      "Mobile access to hospitality operations",
-      "React Native · company team contribution",
-    ],
-  },
-  {
-    title: "Weather Update",
-    id: "com.smartsoftware.weather",
-    asset: "weather",
-    theme: "green",
-    description:
-      "A weather application from Smart Software Ltd, included among my company mobile development and interface contributions.",
-    highlights: [
-      "Weather information on mobile",
-      "Published on Google Play",
-      "React Native · company team contribution",
-    ],
-  },
-];
-projects.push(
-  ...mobileApps.map((app) => ({
-    title: app.title,
-    category: "Mobile apps" as const,
-    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
-    description: app.description,
-    tags: ["React Native", "Android", "Professional work"],
-    theme: app.theme,
-    image: `/assets/${app.asset}-0.webp`,
-    gallery: [0, 1, 2].map((i) => `/assets/${app.asset}-${i}.webp`),
-    highlights: app.highlights,
-    links: [{ label: "Google Play", url: play(app.id) }],
-  })),
-);

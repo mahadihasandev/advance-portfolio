@@ -1115,14 +1115,14 @@ html.dark .nav-pill {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 22px;
 }
 
 /* Mindful scaling animation on project cards */
 .project-card {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
   min-width: 0;
   box-shadow: var(--card-shadow);
@@ -1133,17 +1133,17 @@ html.dark .nav-pill {
 }
 
 .project-card:hover {
-  transform: translateY(-6px) scale(1.015);
+  transform: translateY(-4px) scale(1.01);
   border-color: var(--line-focus);
   box-shadow: var(--card-shadow-hover);
 }
 
 .project-content {
-  padding: 28px 32px 32px;
+  padding: 18px 22px 20px;
 }
 
 .project-visual {
-  height: 380px;
+  height: 250px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -1151,7 +1151,7 @@ html.dark .nav-pill {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 54px 30px 45px;
+  padding: 26px 20px 22px;
   background: #243344;
   color: #e1e8ee;
   cursor: pointer;
@@ -1180,17 +1180,17 @@ html.dark .nav-pill {
   background-image:
     linear-gradient(#ffffff08 1px, transparent 1px),
     linear-gradient(90deg, #ffffff08 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-size: 28px 28px;
   pointer-events: none;
 }
 
 .preview-label {
   position: absolute;
-  left: 25px;
-  top: 23px;
+  left: 18px;
+  top: 14px;
   font-family: monospace;
-  font-size: 9px;
-  letter-spacing: 2px;
+  font-size: 8.5px;
+  letter-spacing: 1.5px;
   opacity: 0.85;
   color: #ffffff;
   font-weight: 600;
@@ -1198,18 +1198,18 @@ html.dark .nav-pill {
 
 .preview-action {
   position: absolute;
-  right: 20px;
-  bottom: 17px;
+  right: 14px;
+  bottom: 12px;
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 11px;
+  gap: 6px;
+  font-size: 10px;
   font-weight: 600;
   color: #ffffff;
-  padding: 9px 14px;
+  padding: 6px 12px;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 30px;
+  border-radius: 20px;
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -1226,10 +1226,10 @@ html.dark .nav-pill {
 .browser-frame {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
-  transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   background: #ffffff;
   position: relative;
@@ -1239,25 +1239,25 @@ html.dark .nav-pill {
 .browser-frame img {
   display: block;
   width: 100%;
-  height: 245px;
+  height: 155px;
   object-fit: cover;
   object-position: top;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover .browser-frame {
-  transform: perspective(1000px) rotateX(0) rotateY(0) scale(1.03);
+  transform: perspective(1000px) rotateX(0) rotateY(0) scale(1.025);
 }
 
 .project-card:hover .browser-frame img {
-  transform: scale(1.03);
+  transform: scale(1.025);
 }
 
 .device-gallery {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
   height: 100%;
   position: relative;
   z-index: 1;
@@ -1265,40 +1265,40 @@ html.dark .nav-pill {
 }
 
 .device-gallery img {
-  height: 310px;
+  height: 195px;
   max-width: 31%;
   width: auto;
   object-fit: contain;
-  border-radius: 16px;
-  border: 4px solid #1e293b;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 11px;
+  border: 3px solid #1e293b;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.35);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   background: #ffffff;
 }
 
 .device-gallery img:nth-child(1) {
-  transform: rotate(-8deg) translateY(12px);
+  transform: rotate(-7deg) translateY(8px);
 }
 
 .device-gallery img:nth-child(2) {
-  transform: translateY(-7px);
+  transform: translateY(-5px);
   z-index: 2;
 }
 
 .device-gallery img:nth-child(3) {
-  transform: rotate(8deg) translateY(12px);
+  transform: rotate(7deg) translateY(8px);
 }
 
 .project-card:hover .device-gallery img:nth-child(1) {
-  transform: rotate(-5deg) translateY(-2px) scale(1.04);
+  transform: rotate(-4deg) translateY(-2px) scale(1.03);
 }
 
 .project-card:hover .device-gallery img:nth-child(2) {
-  transform: translateY(-12px) scale(1.05);
+  transform: translateY(-9px) scale(1.04);
 }
 
 .project-card:hover .device-gallery img:nth-child(3) {
-  transform: rotate(5deg) translateY(-2px) scale(1.04);
+  transform: rotate(4deg) translateY(-2px) scale(1.03);
 }
 
 .device-gallery img:only-child {
@@ -1317,8 +1317,8 @@ html.dark .nav-pill {
 }
 
 .project-meta .eyebrow {
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  font-size: 8.5px;
+  letter-spacing: 1.3px;
   margin: 0;
   color: var(--accent-text);
   font-weight: 700;
@@ -1326,16 +1326,16 @@ html.dark .nav-pill {
 
 .project-meta > span {
   font-family: monospace;
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--muted);
   font-weight: 600;
 }
 
 .project-card h3 {
-  margin: 15px 0 12px;
-  font-size: 29px;
+  margin: 10px 0 7px;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -0.4px;
   color: var(--ink-heading);
 }
 
@@ -1343,7 +1343,7 @@ html.dark .nav-pill {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 12px;
   width: 100%;
   text-align: left;
   background: none;
@@ -1365,27 +1365,28 @@ html.dark .nav-pill {
 }
 
 .project-description {
-  font-size: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
   color: var(--muted);
   margin: 0;
-  min-height: 68px;
+  min-height: 40px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 20px 0;
+  gap: 6px;
+  margin: 12px 0 14px;
 }
 
 .tags span {
-  padding: 6px 12px;
-  font-size: 11px;
+  padding: 4px 9px;
+  font-size: 10.5px;
   font-weight: 500;
   color: var(--tag-ink);
   background: var(--tag-bg);
   border: 1px solid var(--tag-border);
-  border-radius: 6px;
+  border-radius: 5px;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1397,19 +1398,19 @@ html.dark .nav-pill {
 .project-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 14px;
   border-top: 1px solid var(--line);
-  margin-top: 22px;
+  margin-top: 14px;
 }
 
 .project-links a,
 .project-links button {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 12px;
+  gap: 5px;
+  font-size: 11.5px;
   font-weight: 600;
   background: none;
   border: 0;
@@ -1427,32 +1428,56 @@ html.dark .nav-pill {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1.25fr 1fr;
+  border-radius: 18px;
 }
 
 .featured-project .project-visual {
-  height: 440px;
+  height: 430px;
+  padding: 50px 30px 42px;
 }
 
 .featured-project .project-content {
   align-self: center;
-  padding: 40px 45px;
+  padding: 36px 42px;
 }
 
 .featured-project h3 {
-  font-size: 42px;
-  margin-top: 23px;
+  font-size: 38px;
+  margin: 16px 0 12px;
 }
 
 .featured-project .project-description {
   font-size: 15px;
+  line-height: 1.6;
+  min-height: auto;
 }
 
 .featured-project .device-gallery img {
-  height: 350px;
+  height: 340px;
+  border-width: 4px;
+  border-radius: 14px;
 }
 
 .featured-project .browser-frame img {
-  height: 290px;
+  height: 280px;
+}
+
+.featured-project .tags {
+  margin: 18px 0;
+  gap: 8px;
+}
+
+.featured-project .tags span {
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 6px;
+}
+
+.featured-project .project-links {
+  margin-top: 20px;
+  padding-top: 18px;
+  gap: 18px;
+  font-size: 12px;
 }
 
 .work-footnote {
@@ -2358,17 +2383,17 @@ html.dark .nav-pill {
     padding-block: 85px;
   }
   .project-visual {
-    height: 330px;
-    padding-inline: 20px;
+    height: 240px;
+    padding-inline: 18px;
   }
   .device-gallery {
-    gap: 9px;
+    gap: 8px;
   }
   .device-gallery img {
-    height: 275px;
+    height: 185px;
   }
   .browser-frame img {
-    height: 220px;
+    height: 150px;
   }
   .featured-project .project-visual {
     height: 410px;
@@ -2383,10 +2408,10 @@ html.dark .nav-pill {
     font-size: 34px;
   }
   .project-content {
-    padding: 25px;
+    padding: 18px 20px;
   }
   .project-card h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .project-search input {
     width: 180px;
@@ -2487,11 +2512,11 @@ html.dark .nav-pill {
     gap: 22px;
   }
   .project-visual {
-    height: 290px;
-    padding: 50px 15px 45px;
+    height: 240px;
+    padding: 24px 15px 20px;
   }
   .device-gallery img {
-    height: 220px;
+    height: 180px;
     border-width: 3px;
     border-radius: 9px;
   }
@@ -2499,13 +2524,13 @@ html.dark .nav-pill {
     gap: 5px;
   }
   .browser-frame img {
-    height: 185px;
+    height: 150px;
   }
   .project-content {
-    padding: 22px;
+    padding: 18px;
   }
   .project-card h3 {
-    font-size: 23px;
+    font-size: 20px;
   }
   .project-description {
     min-height: 0;
@@ -2791,28 +2816,28 @@ html.dark .nav-pill {
   }
   .project-visual,
   .featured-project .project-visual {
-    height: 330px;
-    padding: 50px 20px 42px;
+    height: 240px;
+    padding: 26px 16px 20px;
   }
   .device-gallery {
-    gap: 10px;
+    gap: 8px;
   }
   .device-gallery img,
   .featured-project .device-gallery img {
-    height: 270px;
+    height: 185px;
   }
   .browser-frame img,
   .featured-project .browser-frame img {
-    height: 220px;
+    height: 150px;
   }
   .project-content,
   .featured-project .project-content {
-    padding: 25px 22px;
+    padding: 18px 20px 20px;
   }
   .project-card h3,
   .featured-project h3 {
-    font-size: 27px;
-    margin: 16px 0 12px;
+    font-size: 21px;
+    margin: 10px 0 8px;
   }
   .project-description,
   .featured-project .project-description {

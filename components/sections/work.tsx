@@ -82,7 +82,7 @@ export default function Work() {
               <h3>
                 <button onClick={() => setSelected(p)}>
                   {p.title}
-                  <ArrowUpRight size={24} />
+                  <ArrowUpRight size={19} />
                 </button>
               </h3>
               <p className="project-description">{p.description}</p>
@@ -93,7 +93,7 @@ export default function Work() {
               </div>
               <div className="project-links">
                 <button onClick={() => setSelected(p)}>
-                  Project details <ArrowUpRight size={16} />
+                  Project details <ArrowUpRight size={14} />
                 </button>
                 {p.links.slice(0, 2).map((l) => (
                   <ExternalLink key={l.url} href={l.url}>
