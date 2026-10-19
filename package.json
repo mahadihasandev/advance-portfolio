@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack --hostname 127.0.0.1",
     "build": "next build --webpack",
+    "start": "next start",
     "format": "prettier --write app components lib *.ts *.mjs *.json README.md",
     "typecheck": "tsc --noEmit"
   },

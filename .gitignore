@@ -1,6 +1,30 @@
+# dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# next.js build output
 .next/
 out/
-*.tsbuildinfo
+
+# environment variables
 .env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript build info
+*.tsbuildinfo
+next-env.d.ts
+
+# debug and logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# system & internal
+.DS_Store
+Thumbs.db
 .sites/
+.openai/

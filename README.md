@@ -16,21 +16,21 @@ Visit http://127.0.0.1:3000. For production, run `npm run build`; deploy the gen
 ```text
 app/                 App Router entry points, metadata, global design system
 components/sections/ Hero, work, about, experience, and contact sections
-components/projects/ Reusable project preview rendering
+components/projects/ Real screenshot previews and accessible gallery dialog
 components/shared/   Navigation, links, headings, and motion wrapper
 lib/profile.ts       Contact links, navigation, and skills
 lib/projects.ts      Typed project catalog and external project links
-lib/store.tsx        Redux filter/expansion state and per-instance provider
-public/assets/       Portrait and project images from the original portfolio
+lib/store.tsx        Redux project category filter and per-instance provider
+public/assets/       Original images, Play Store screenshots, and local fonts
 ```
 
-Update profile and project data in `lib/` without changing the layout. Project images are optional; projects without source screenshots use explicitly labeled interface concepts. Company apps are credited as team contributions. The résumé button uses the original Google Drive link; update it when your résumé changes.
+Update profile and project data in `lib/` without changing the layout. All 15 projects use real screenshots: existing portfolio assets, Google Play imagery, or captured public website screens. HRM and POS images show their public sign-in pages. Mobile screenshots open in a keyboard-navigable dialog. CloudSpace is personal; the other mobile applications are professional team contributions at Smart Software Ltd. The résumé button uses the original Google Drive link; update it when your résumé changes.
 
 Contact uses mail and telephone links with clipboard support; no server-side contact service or credentials are required. No fabricated delivery metrics, employment dates, or client endorsements are included.
 
 ## Verification
 
-`npm run typecheck` checks TypeScript. `npm run build` validates the production static export. Check desktop/mobile navigation, category filters, project expansion, email copying, and external links in a browser.
+`npm run typecheck` checks TypeScript. `npm run build` validates the production static export. Check desktop/mobile navigation, search, category filters, dialog close/Escape, screenshot navigation, email copying, and external links in a browser.
 
 The development and build scripts use Webpack because Turbopack's CSS subprocess failed on the Windows build host. `npm run format` applies Prettier. Production build and TypeScript checks passed; browser visual and interaction checks could not be completed because preview access was declined. Update `metadataBase` in `app/layout.tsx` when deploying under a different domain.
 

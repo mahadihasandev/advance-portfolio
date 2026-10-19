@@ -4,6 +4,7 @@ import Work from "./sections/work";
 import About from "./sections/about";
 import Experience from "./sections/experience";
 import Contact from "./sections/contact";
+import Approach from "./sections/approach";
 export default function Portfolio() {
   return (
     <>
@@ -24,11 +25,14 @@ export default function Portfolio() {
           <i>✳</i>
           <span>NODE.JS</span>
           <i>✳</i>
+          <span>PHP</span>
+          <i>✳</i>
           <span>THOUGHTFUL ENGINEERING</span>
         </div>
         <Work />
         <About />
         <Experience />
+        <Approach />
         <Contact />
       </main>
     </>

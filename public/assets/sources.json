@@ -1,0 +1,50 @@
+{
+  "bpc": {
+    "source": "https://play.google.com/store/apps/details?id=com.bpcapp&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/H0cHe0N_IBp8XopZLZdWZylOt65x4bg1n59PwmB145qlP9jmpp9roW1F3T4Clq9bU3qNy6sfaYj65cACHJHPgg=w720",
+      "https://play-lh.googleusercontent.com/LEk_N1xdhLm-QUQ9HRCiAzJf7yEBO2muvgG6GYkUdiNC5s6HSjju-om-iihanU1WmaHp1N0v2xPDXIDkgAjQsA=w720",
+      "https://play-lh.googleusercontent.com/w0p4xKNgRmNC0HMl-2dXLzuGSzz2Mf2CunkRIGWO_XkDVB2HxerTIrxTmmGFvjrT8hLnUbmzjjiOkoh1_msc=w720"
+    ]
+  },
+  "hrm": {
+    "source": "https://play.google.com/store/apps/details?id=com.smartsoftware.mamungroup&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/FW-QYiAfsjKetu0UnQdpCp0sw0WkPsJrsU2uDI2NrC3GnqvlyZbu7JiDgPeDaZKmmLrdFyEgPjBFsW0RUNXoOA=w720",
+      "https://play-lh.googleusercontent.com/YP-LkAYYugg3coKWwex3AMmWwcBe8zw_nxXX58jIaRq28G0IjgtmQTfzwZ_B1fTuHnASWrWsQT7l0ZKEidVVvA=w720",
+      "https://play-lh.googleusercontent.com/IyKZZ-uRHRdoa7zPRhZgqqiqwkvxGgK7wf_8T_rkcZ5wTjUI_5WgIdW2GByV-ZWW2ka2zoRzPEa5ggumgIUE=w720"
+    ]
+  },
+  "weather": {
+    "source": "https://play.google.com/store/apps/details?id=com.smartsoftware.weather&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/XS4VtNxFeLSnOdIMmysyCWY4ouVfFV2jW-Gc7wq7t4HY5Tcrdm3ROvG83qpc4b9_wpNf5O4Hot6CCUw0EvCj=w720",
+      "https://play-lh.googleusercontent.com/NFKog1Uuj1XM4TIcvCPGgcsdvdjnF6ZcdNOug3wHtXrHeMHkyKdfXta9hmXv4737wDBO0aQ-Kj4oGD2m2zRESQ=w720",
+      "https://play-lh.googleusercontent.com/hUtiCiCKJvGshuluoenRnh5juRe3Cua31EjCcE-3PYIEqi362-8Elem_EXtC4g_zJQx3AQs6VT-TOH8j2hLp_Vg=w720"
+    ]
+  },
+  "employer": {
+    "source": "https://play.google.com/store/apps/details?id=employer.bdjobslive.com&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/aKStb6CHwHR2Wmi_hQ-9im3tYCKZH8YXx-7P6Sof7GfHoJKwTgkwe0pMR0GG9Cz_tFp4AIrsgS7AM0r-yVyoVg=w720",
+      "https://play-lh.googleusercontent.com/9oQ__nOW2Q4o8SYoi720vQd70EHkpc-8Olf2Q9p2EQnfjXT48huugL4lJdQjaVpjboFsixReh-_NQes89t8vog=w720",
+      "https://play-lh.googleusercontent.com/RhMeKUrYO2Z374sjfyba9P8iKTYl0nxxyIYQljPVsmvEZKwEWtIkQc4CP3oQNqIGLpsY6i5_GlCTVapS8QFzpQ=w720"
+    ]
+  },
+  "hotel": {
+    "source": "https://play.google.com/store/apps/details?id=com.smartsoftware.hotel&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/y0dZT3AT6eA0kvlr8O8bEfeNkWnaDfCi5QdZNsUbpBcIO2CQiNVhCrAflVlqBcrm5NMqkXbQ7rhe9I993WNiIg=w720",
+      "https://play-lh.googleusercontent.com/iXkB5s4jfkWWP8myLGILWW02li3CO1keJxb4-8RBkMmqVr4Ja8jstKKzAd_ON7A6l31bQ596ybKHL2m_lVNi=w720",
+      "https://play-lh.googleusercontent.com/7pU5CNgzaS8jXbMlFy_6WXpmJn7pKSkC1yPE_JWZBGfuPTMewaFj8w9pp57odLECfQo-qMQmrmtLBWa1lbXLvf8=w720"
+    ]
+  },
+  "jobs": {
+    "source": "https://play.google.com/store/apps/details?id=com.smartsoftware.bdjobslive&hl=en",
+    "images": [
+      "https://play-lh.googleusercontent.com/DsAXMX6Gs6ACCeR2O9q-OgDH_2YuhRaHYcNPwtLB8Sl20J_5N3gRVEJoSdgp_pMEsSGihjTSu5--E2Ti9SQ0kQ=w720",
+      "https://play-lh.googleusercontent.com/ShMDC7HLV4AZLV7vAf5BrrJUSMJ_3LBZ_9RtPm2sHw_0KvhGvVUwC59xH4qjqcnwKRk28g7Rw1V6qxQOyixC=w720",
+      "https://play-lh.googleusercontent.com/sbbDesDW77I_mTFieCg-dSgkGjmcCbloky-XnGc0pLz7KvvJiuiM6EK9A0UiWNT-cTT3spYL9RQj17RgZSy7hg=w720"
+    ]
+  }
+}

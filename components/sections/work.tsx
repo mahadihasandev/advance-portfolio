@@ -1,111 +1,134 @@
 "use client";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ArrowDown } from "lucide-react";
-import { projects, companyApps } from "@/lib/projects";
-import {
-  setFilter,
-  toggleExpanded,
-  type RootState,
-  type Filter,
-} from "@/lib/store";
+import { Search, ArrowUpRight } from "lucide-react";
+import { projects, type Project } from "@/lib/projects";
+import { setFilter, type RootState, type Filter } from "@/lib/store";
 import { ExternalLink, Reveal, SectionHeading } from "../shared/ui";
 import ProjectVisual from "../projects/project-visual";
+import ProjectDialog from "../projects/project-dialog";
 export default function Work() {
   const dispatch = useDispatch();
-  const { filter, expanded } = useSelector((s: RootState) => s.portfolio);
+  const filter = useSelector((s: RootState) => s.portfolio.filter);
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<Project | null>(null);
   const filtered = projects.filter(
-    (p) => filter === "All work" || p.category === filter,
+    (p) =>
+      (filter === "All work" || p.category === filter) &&
+      `${p.title} ${p.tags.join(" ")} ${p.description}`
+        .toLowerCase()
+        .includes(query.toLowerCase()),
   );
-  const visible = expanded ? filtered : filtered.slice(0, 4);
   return (
     <section id="work" className="work section container">
       <SectionHeading
         number="01"
-        label="SELECTED WORK"
-        title="Built with purpose."
+        label="THE PROJECT COLLECTION"
+        title="Real products. Real work."
       >
         <p>
-          A selection of mobile experiences and web
-          <br className="desktop-break" /> platforms. From idea to
-          implementation.
+          Mobile apps in the hands of users.
+          <br />
+          Web platforms with the code to back them up.
         </p>
       </SectionHeading>
-      <div className="filters" aria-label="Filter projects">
-        {(["All work", "Mobile apps", "Web platforms"] as Filter[]).map((f) => (
-          <button
-            key={f}
-            aria-pressed={filter === f}
-            className={filter === f ? "active" : ""}
-            onClick={() => dispatch(setFilter(f))}
-          >
-            {f}
-            <span>
-              {f === "All work"
-                ? projects.length
-                : projects.filter((p) => p.category === f).length}
-            </span>
-          </button>
-        ))}
+      <div className="project-toolbar">
+        <div className="filters" aria-label="Filter projects">
+          {(["All work", "Mobile apps", "Web platforms"] as Filter[]).map(
+            (f) => (
+              <button
+                key={f}
+                aria-pressed={filter === f}
+                className={filter === f ? "active" : ""}
+                onClick={() => dispatch(setFilter(f))}
+              >
+                {f}
+                <span>
+                  {f === "All work"
+                    ? projects.length
+                    : projects.filter((p) => p.category === f).length}
+                </span>
+              </button>
+            ),
+          )}
+        </div>
+        <label className="project-search">
+          <Search size={17} />
+          <input
+            aria-label="Search projects"
+            placeholder="Search projects or technologies"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          {query && (
+            <button aria-label="Clear search" onClick={() => setQuery("")}>
+              ×
+            </button>
+          )}
+        </label>
       </div>
       <div className="project-grid" aria-live="polite">
-        {visible.map((p, i) => (
-          <Reveal className="project-card" key={p.title}>
-            <ProjectVisual project={p} />
-            <div className="project-meta">
-              <p className="eyebrow">{p.type}</p>
-              <span>/{String(i + 1).padStart(2, "0")}</span>
-            </div>
-            <h3>{p.title}</h3>
-            <p className="project-description">{p.description}</p>
-            <div className="tags">
-              {p.tags.map((t) => (
-                <span key={t}>{t}</span>
-              ))}
-            </div>
-            <div className="project-links">
-              {p.links.map((l) => (
-                <ExternalLink key={l.url} href={l.url}>
-                  {l.label}
-                </ExternalLink>
-              ))}
+        {filtered.map((p, i) => (
+          <Reveal
+            className={`project-card ${i === 0 && !query ? "featured-project" : ""}`}
+            key={p.title}
+          >
+            <ProjectVisual project={p} onOpen={() => setSelected(p)} />
+            <div className="project-content">
+              <div className="project-meta">
+                <p className="eyebrow">{p.type}</p>
+                <span>/{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <h3>
+                <button onClick={() => setSelected(p)}>
+                  {p.title}
+                  <ArrowUpRight size={24} />
+                </button>
+              </h3>
+              <p className="project-description">{p.description}</p>
+              <div className="tags">
+                {p.tags.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+              <div className="project-links">
+                <button onClick={() => setSelected(p)}>
+                  Project details <ArrowUpRight size={16} />
+                </button>
+                {p.links.slice(0, 2).map((l) => (
+                  <ExternalLink key={l.url} href={l.url}>
+                    {l.label}
+                  </ExternalLink>
+                ))}
+              </div>
             </div>
           </Reveal>
         ))}
       </div>
-      {filtered.length > 4 && (
-        <button
-          className="button more-button"
-          onClick={() => dispatch(toggleExpanded())}
-        >
-          {expanded
-            ? "Show selected work"
-            : `Explore all ${filtered.length} projects`}
-          <ArrowDown
-            size={16}
-            style={{ transform: expanded ? "rotate(180deg)" : undefined }}
-          />
-        </button>
+      {filtered.length === 0 && (
+        <div className="empty-projects">
+          <h3>No matching projects</h3>
+          <p>Try a technology such as React, Next.js, or PHP.</p>
+          <button
+            className="button primary"
+            onClick={() => {
+              setQuery("");
+              dispatch(setFilter("All work"));
+            }}
+          >
+            Reset filters
+          </button>
+        </div>
       )}
-      <div className="more-apps">
-        <div>
-          <p className="eyebrow">MORE COMPANY CONTRIBUTIONS</p>
-          <p>More apps. The same attention to detail.</p>
-          <small>
-            Development, modifications, and interface redesigns at Smart
-            Software Ltd.
-          </small>
-        </div>
-        <div>
-          {companyApps.map((a) => (
-            <ExternalLink
-              key={a.id}
-              href={"https://play.google.com/store/apps/details?id=" + a.id}
-            >
-              {a.title}
-            </ExternalLink>
-          ))}
-        </div>
-      </div>
+      <p className="work-footnote">
+        Showing {filtered.length} projects · Original project screenshots and
+        public store imagery · Company work credited to the team.
+      </p>
+      <ProjectDialog
+        key={selected?.title ?? "closed"}
+        project={selected}
+        onClose={() => setSelected(null)}
+      />
     </section>
   );
 }

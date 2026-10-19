@@ -5,6 +5,9 @@ export type Project = {
   description: string;
   tags: string[];
   image?: string;
+  gallery?: string[];
+  highlights?: string[];
+  imageNote?: string;
   theme: string;
   links: { label: string; url: string }[];
 };
@@ -14,11 +17,18 @@ const play = (id: string) =>
 export const projects: Project[] = [
   {
     title: "HRM + ERP",
+    image: "/assets/hrm-1.webp",
+    gallery: ["/assets/hrm-1.webp", "/assets/hrm-2.webp", "/assets/hrm-0.webp"],
+    highlights: [
+      "Mobile HRM and ERP experience",
+      "Attendance and workday overview",
+      "Company team contribution · Android & iOS",
+    ],
     category: "Mobile apps",
-    type: "SMART SOFTWARE LTD · ANDROID & IOS",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
     description:
       "Contributed to a business application that brings HR and ERP workflows to mobile. Built as part of the team at Smart Software Ltd.",
-    tags: ["React Native", "Android", "iOS", "Company work"],
+    tags: ["React Native", "Android", "iOS", "Professional work"],
     theme: "green",
     links: [
       { label: "Google Play", url: play("com.smartsoftware.mamungroup") },
@@ -26,11 +36,29 @@ export const projects: Project[] = [
   },
   {
     title: "Human resource management",
+    image: "/assets/hrm-dashboard.png",
+    gallery: [
+      "/assets/hrm-dashboard.png",
+      "/assets/hrm-directory.png",
+      "/assets/hrm-leave.png",
+      "/assets/hrm-probation.png",
+      "/assets/hrm-archive.png",
+    ],
+    imageNote:
+      "HRM web application · People Overview Dashboard, Master Employee Directory, Leave Management, Probation Reviews, and Deactive Archive",
+    highlights: [
+      "People Overview dashboard with real-time biometric punch-in & attendance status",
+      "Master Employee Directory with role & department filters, bank verification, and access controls",
+      "Statutory probation confirmation & review tracking (BLA 2006 compliance)",
+      "Multi-tier leave management and approval workflows (Casual, Short, Compensatory, Earned, Sick)",
+      "Deactivated staff archive with separation audit logs and one-click reactivation",
+      "Next.js frontend with dedicated PHP backend architecture",
+    ],
     category: "Web platforms",
     type: "FULL-STACK WEB APPLICATION",
     description:
-      "An HRM web application pairing a Next.js frontend with a dedicated PHP backend. Explore the live application and both sides of the codebase.",
-    tags: ["Next.js", "PHP", "Full-stack"],
+      "A complete People & Factory Operations HRM web platform featuring biometric punch-in, master workforce directory, statutory probation reviews, leave workflows, and personnel archives. Built with Next.js and PHP.",
+    tags: ["Next.js", "PHP", "Full-stack", "Factory Operations", "HRM"],
     theme: "purple",
     links: [
       {
@@ -42,16 +70,35 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Point of sale",
+    title: "Point of sale (Prime Account)",
+    image: "/assets/pos-checkout.png",
+    gallery: [
+      "/assets/pos-checkout.png",
+      "/assets/pos-sales-register.png",
+      "/assets/pos-purchase.png",
+      "/assets/pos-due-collection.png",
+      "/assets/pos-supplier-collection.png",
+    ],
+    imageNote:
+      "Prime Account Retail Workspace · Barcode POS Checkout, Sales Register & Ledger, Chalan Intake, Customer Due Collection, and Supplier Settlements",
+    highlights: [
+      "High-speed barcode scanner intake [F2] with quick product lookup & hotkey settlement [F8/F10]",
+      "Multi-channel payment handling (Bank, Cash), change calculation, and thermal POS receipt printing",
+      "Sales Register & Ledger with invoice tracking, customer credit breakdown, and CSV data export",
+      "Purchase & Chalan intake with supplier tracking, free quantity bonuses, and warehouse allocations",
+      "Customer and supplier due collection workspaces with advance balances and ledger settlement",
+      "Engineered with Next.js, Redux Toolkit, RTK Query, and a Laravel backend",
+    ],
     category: "Web platforms",
     type: "FULL-STACK WEB APPLICATION",
     description:
-      "A point-of-sale web project with separate frontend and backend repositories, built around the everyday needs of a retail business.",
-    tags: ["Web application", "Frontend", "Backend"],
+      "Prime Account brings retail and wholesale operations into one seamless workspace: hotkey barcode checkout, inventory chalan intake, sales ledger auditing, customer due collection, and supplier receivables.",
+    tags: ["Next.js", "Redux Toolkit", "RTK Query", "Laravel", "POS System"],
     theme: "peach",
     links: [
       { label: "Frontend", url: github + "POS-Fontend" },
       { label: "Backend", url: github + "POS-Backend" },
+      { label: "Live website", url: "https://pos-fontend-kappa.vercel.app/" },
     ],
   },
   {
@@ -90,16 +137,22 @@ export const projects: Project[] = [
   },
   {
     title: "BD Jobs Live",
+    image: "/assets/jobs-0.webp",
+    gallery: [
+      "/assets/jobs-0.webp",
+      "/assets/jobs-1.webp",
+      "/assets/jobs-2.webp",
+    ],
     category: "Mobile apps",
-    type: "SMART SOFTWARE LTD · COMPANY WORK",
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
     description:
       "Contributed to recruitment applications at Smart Software Ltd, including the job-seeker and employer experiences.",
-    tags: ["React Native", "Recruitment", "Company work"],
+    tags: ["React Native", "Recruitment", "Professional work"],
     theme: "blue",
     links: [
       {
         label: "Job-seeker app",
-        url: "https://play.google.com/store/search?q=bd%20jobs%20live&c=apps",
+        url: play("com.smartsoftware.bdjobslive"),
       },
       { label: "Employer app", url: play("employer.bdjobslive.com") },
     ],
@@ -187,8 +240,71 @@ export const projects: Project[] = [
     ],
   },
 ];
-export const companyApps = [
-  { title: "BPC app", id: "com.bpcapp" },
-  { title: "Weather app", id: "com.smartsoftware.weather" },
-  { title: "Hotel app", id: "com.smartsoftware.hotel" },
+const mobileApps = [
+  {
+    title: "BPC — field inspections",
+    id: "com.bpcapp",
+    asset: "bpc",
+    theme: "purple",
+    description:
+      "A mobile workspace for filling-station inspections, surveys, compliance assessments, and reporting for authorized BPC personnel.",
+    highlights: [
+      "Digital inspections and photo evidence",
+      "Compliance scoring and PDF reports",
+      "Bengali and English support",
+    ],
+  },
+  {
+    title: "BDJobs Live Employer",
+    id: "employer.bdjobslive.com",
+    asset: "employer",
+    theme: "blue",
+    description:
+      "The employer side of BDJobs Live: a dedicated recruitment application developed as part of the Smart Software team.",
+    highlights: [
+      "Employer-focused recruitment experience",
+      "Companion to the BD Jobs Live job-seeker app",
+      "React Native · company team contribution",
+    ],
+  },
+  {
+    title: "Smart Hotel",
+    id: "com.smartsoftware.hotel",
+    asset: "hotel",
+    theme: "peach",
+    description:
+      "A mobile ERP application bringing hotel, restaurant, and hospitality operations into a connected business workspace.",
+    highlights: [
+      "Hotel ERP and business management",
+      "Mobile access to hospitality operations",
+      "React Native · company team contribution",
+    ],
+  },
+  {
+    title: "Weather Update",
+    id: "com.smartsoftware.weather",
+    asset: "weather",
+    theme: "green",
+    description:
+      "A weather application from Smart Software Ltd, included among my company mobile development and interface contributions.",
+    highlights: [
+      "Weather information on mobile",
+      "Published on Google Play",
+      "React Native · company team contribution",
+    ],
+  },
 ];
+projects.push(
+  ...mobileApps.map((app) => ({
+    title: app.title,
+    category: "Mobile apps" as const,
+    type: "SMART SOFTWARE LTD · PROFESSIONAL WORK",
+    description: app.description,
+    tags: ["React Native", "Android", "Professional work"],
+    theme: app.theme,
+    image: `/assets/${app.asset}-0.webp`,
+    gallery: [0, 1, 2].map((i) => `/assets/${app.asset}-${i}.webp`),
+    highlights: app.highlights,
+    links: [{ label: "Google Play", url: play(app.id) }],
+  })),
+);

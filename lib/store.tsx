@@ -5,18 +5,14 @@ import { useRef } from "react";
 export type Filter = "All work" | "Mobile apps" | "Web platforms";
 const slice = createSlice({
   name: "portfolio",
-  initialState: { filter: "All work" as Filter, expanded: false },
+  initialState: { filter: "All work" as Filter },
   reducers: {
     setFilter: (s, a: PayloadAction<Filter>) => {
       s.filter = a.payload;
-      s.expanded = false;
-    },
-    toggleExpanded: (s) => {
-      s.expanded = !s.expanded;
     },
   },
 });
-export const { setFilter, toggleExpanded } = slice.actions;
+export const { setFilter } = slice.actions;
 const makeStore = () =>
   configureStore({ reducer: { portfolio: slice.reducer } });
 export type RootState = ReturnType<ReturnType<typeof makeStore>["getState"]>;
