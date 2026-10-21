@@ -244,24 +244,7 @@ export const projects: Project[] = [
     ],
     links: [{ label: "Google Play", url: play("com.smartsoftware.weather") }],
   },
-  // Bottom projects as requested: CloudSpace, FireChat, Smart Banking, Commerce dashboard, Sanity content studio
-  {
-    title: "CloudSpace",
-    category: "Mobile apps",
-    type: "PERSONAL MOBILE PROJECT",
-    description:
-      "A React Native storage manager with storage insights, usage cards, and a clean mobile interface.",
-    tags: ["React Native", "Expo", "TypeScript"],
-    image: "/assets/react-native-cloudspace.png",
-    theme: "blue",
-    links: [
-      { label: "Source code", url: github + "expo-clude-strage" },
-      {
-        label: "View APK",
-        url: "https://drive.google.com/file/d/1uodngEDF1Gn7Vul1rmRUoOSV4-paJ139/view",
-      },
-    ],
-  },
+  // Bottom projects: FireChat, Smart Banking, Commerce dashboard, Sanity content studio
   {
     title: "FireChat",
     category: "Web platforms",

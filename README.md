@@ -24,7 +24,7 @@ lib/store.tsx        Redux project category filter and per-instance provider
 public/assets/       Original images, Play Store screenshots, and local fonts
 ```
 
-Update profile and project data in `lib/` without changing the layout. All 15 projects use real screenshots: existing portfolio assets, Google Play imagery, or captured public website screens. HRM and POS images show their public sign-in pages. Mobile screenshots open in a keyboard-navigable dialog. CloudSpace is personal; the other mobile applications are professional team contributions at Smart Software Ltd. The résumé button uses the original Google Drive link; update it when your résumé changes.
+Update profile and project data in `lib/` without changing the layout. All 14 projects use real screenshots: existing portfolio assets, Google Play imagery, or captured public website screens. HRM and POS images show their public sign-in pages. Mobile screenshots open in a keyboard-navigable dialog. The mobile applications are professional team contributions at Smart Software Ltd. The résumé button uses the original Google Drive link; update it when your résumé changes.
 
 Contact uses mail and telephone links with clipboard support; no server-side contact service or credentials are required. No fabricated delivery metrics, employment dates, or client endorsements are included.
 
