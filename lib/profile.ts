@@ -31,6 +31,13 @@ export const socials = [
     description: "Personal updates, community connect & direct messaging",
     badge: "Community",
   },
+  {
+    name: "WhatsApp",
+    handle: profile.phone,
+    url: `https://wa.me/${profile.phone.replace(/\D/g, "")}`,
+    description: "Message me directly on WhatsApp",
+    badge: "Chat directly",
+  },
 ];
 export const navigation = ["Work", "About", "Experience", "Contact"];
 export const skills = [

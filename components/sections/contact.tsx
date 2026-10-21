@@ -8,6 +8,7 @@ import {
   Github,
   Linkedin,
   Facebook,
+  MessageCircle,
 } from "lucide-react";
 import { profile, socials } from "@/lib/profile";
 import { ExternalLink, Reveal } from "../shared/ui";
@@ -58,7 +59,9 @@ export default function Contact() {
                   ? Github
                   : s.name === "LinkedIn"
                     ? Linkedin
-                    : Facebook;
+                    : s.name === "WhatsApp"
+                      ? MessageCircle
+                      : Facebook;
               return (
                 <a
                   key={s.name}
@@ -106,7 +109,15 @@ export default function Contact() {
               <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
               <ExternalLink href={profile.facebook}>Facebook</ExternalLink>
               <a href={"tel:" + profile.phone}>
-                Call me <ArrowUpRight size={16} />
+                {profile.phone} <ArrowUpRight size={16} />
+              </a>
+              <a
+                href={`https://wa.me/${profile.phone.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Message me on WhatsApp at ${profile.phone}`}
+              >
+                WhatsApp <ArrowUpRight size={16} />
               </a>
             </div>
           </div>
